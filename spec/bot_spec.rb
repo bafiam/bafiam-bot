@@ -1,9 +1,13 @@
-require_relative '../app/commands/bot.rb'
+# frozen_string_literal: true
 
-RSpec.describe "something to be performed" do
-  context "under condition" do
-    it "behaves like" do
-      
-    end
+require './spec/spec_helper.rb'
+
+describe Bafiambot::Bot do
+  def app
+    Bafiambot::Bot.instance
   end
+
+  subject { app }
+
+  it_behaves_like 'a slack ruby bot'
 end
