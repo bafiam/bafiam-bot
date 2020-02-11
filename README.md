@@ -1,17 +1,19 @@
 # Slack Bot - Capstone Projects
 
-The bafiam bot is technically a small tweek that bring efficiency to any slack workspace. As a developer, i find myself, in need of crucial members infomation. The only wany to access this infomation is to go through the entire members list. For example, in a case where i have the member email, am forced to almost check each and every member profile and compare their email with the one i have.This is tireing work. On other days, i need a motivation quote to think about and start my day with. The solution to that is search for one on the net.
+The bafiam bot is technically a small tweek that bring efficiency to any slack workspace. As a developer, i find myself, in need of crucial members infomation. The only way to access this infomation is to go through the entire members list. For example, in the case where i have a members email, am forced to almost check each and every member profile and compare their email with the one i have.This is tiring work. On other days, i need a motivation quote to think about and start my day with. The solution to that is to search for one on the net.
 The bafiam bot using a single command:
 
 1. One is able to get a list of all members; all arranged in a list starting with their name and email.
-2. Get a random quote
+2. Get a random quote to start your day
 
 ## Prerequisites
 
 The development environment uses `Ruby`, hence install ruby before proceeding.
 
 - Mac OS - `brew install ruby`
+
 - Linux - `sudo apt-get install ruby-full`
+
 - windows - Download RubyInstaller [here](https://rubyinstaller.org/), run it, and you are done!
 
 ## Installation and set-up
