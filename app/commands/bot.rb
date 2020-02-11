@@ -13,6 +13,13 @@ module Bafiambot
         client.say(channel: data.channel, text: send)
       end
     end
+    class GetQuote < SlackRubyBot::Commands::Base
+      match /start my day!!/ do |client, data, _match|
+        output = Quotes.fetchQuotes
+        send = Quotes.obtainQuote(output)
+        client.say(channel: data.channel, text: send)
+      end
+    end
   end
 end
 
@@ -38,5 +45,20 @@ class Users
     end
 
     user_names
+  end
+end
+
+class Quotes
+  def self.fetchQuotes
+    url = 'http://quotes.stormconsultancy.co.uk/random.json'
+    response = RestClient.get(url)
+    output = JSON.parse(response)
+    output
+  end
+
+  def self.obtainQuote(data)
+    quote = data['quote']
+    author = data['author']
+    " #{quote} by #{author}"
   end
 end

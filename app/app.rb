@@ -10,6 +10,10 @@ module Bafiambot
         title 'get_info'
         desc 'return workspace members name and email'
       end
+      command 'start my day!!' do
+        title 'start my day!!'
+        desc 'return a random quote to start your day'
+      end
     end
   end
 end
