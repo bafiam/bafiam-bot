@@ -16,8 +16,8 @@ module Bafiambot
     # get quote bot
     class GetQuote < SlackRubyBot::Commands::Base
       match /start my day!!/ do |client, data, _match|
-        output = Quotes.fetchQuotes
-        send = Quotes.obtainQuote(output)
+        output = Quotes.fetch_quotes
+        send = Quotes.obtain_quote(output)
         client.say(channel: data.channel, text: send)
       end
     end
