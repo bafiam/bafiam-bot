@@ -18,7 +18,7 @@ module Bafiambot
     end
 
     class GetQuote < SlackRubyBot::Commands::Base
-      match /start my day!!/ do |client, data, _match|
+      match (/start my day!!/) do |client, data, _match|
         url = 'http://quotes.stormconsultancy.co.uk/random.json'
         response = RestClient.get(url)
         output = Quotes.new(JSON.parse(response))
