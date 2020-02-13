@@ -1,6 +1,6 @@
 # rubocop:disable LineLength
 class Testdata
-  def self.run_data
+  def self.run_data # rubocop:disable Metrics/MethodLength
     '{
         "ok": true,
         "members": [

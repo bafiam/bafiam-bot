@@ -3,8 +3,6 @@ AllCops:
     - "README.md"
     - "Guardfile"
     - "Rakefile"
-    - "./spec/dump_data.rb"
-    - "./spec/quote_data.rb"
 
   DisplayCopNames: true
 
