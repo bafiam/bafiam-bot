@@ -3,7 +3,6 @@ require 'json'
 require_relative '../lib/users.rb'
 require_relative '../lib/quotes.rb'
 
-
 module Bafiambot
   module Commands
     class GetUserInfo < SlackRubyBot::Commands::Base

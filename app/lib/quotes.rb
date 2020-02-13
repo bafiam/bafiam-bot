@@ -4,7 +4,6 @@ require 'json'
 class Quotes
   attr_reader :output
   def initialize(output)
-
     @output = output
   end
 

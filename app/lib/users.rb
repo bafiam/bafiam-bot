@@ -1,4 +1,3 @@
-
 class Users
   attr_reader :output
   def initialize(output = {})
