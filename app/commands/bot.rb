@@ -5,7 +5,7 @@ require 'json'
 
 module Bafiambot
   module Commands
-    # get user info bot
+    
     class GetUserInfo < SlackRubyBot::Commands::Base
       command 'get_info' do |client, data, _match|
         output = Users.fetch_data
@@ -13,7 +13,7 @@ module Bafiambot
         client.say(channel: data.channel, text: send)
       end
     end
-    # get quote bot
+    
     class GetQuote < SlackRubyBot::Commands::Base
       match /start my day!!/ do |client, data, _match|
         output = Quotes.fetch_quotes
@@ -24,7 +24,7 @@ module Bafiambot
   end
 end
 
-# get user info
+
 class Users
   def self.fetch_data
     get_token = ENV['SLACK_API_TOKEN']
@@ -49,7 +49,7 @@ class Users
   end
 end
 
-# get quotes
+
 class Quotes
   def self.fetch_quotes
     url = 'http://quotes.stormconsultancy.co.uk/random.json'
