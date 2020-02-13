@@ -2,15 +2,15 @@ require 'rest-client'
 require 'json'
 
 class Users
-  attr_accessor :output
   def initialize
+    attr_accessor :output
     get_token = ENV['SLACK_API_TOKEN']
     url = "https://slack.com/api/users.list?token=#{get_token}"
     response = RestClient.get(url)
     @output = JSON.parse(response)
   end
 
-  def get_all_users_name
+  def all_users_name
     member = @output['members']
     i = 0
     user_names = []

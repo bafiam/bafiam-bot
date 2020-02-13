@@ -6,7 +6,7 @@ module Bafiambot
     class GetUserInfo < SlackRubyBot::Commands::Base
       command 'get_info' do |client, data, _match|
         output = Users.new
-        send = output.get_all_users_name
+        send = output.all_users_name
         client.say(channel: data.channel, text: send)
       end
     end
