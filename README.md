@@ -40,9 +40,9 @@ The development environment uses `Ruby`, hence install ruby before proceeding.
 
 ## Commands
 
-1. `@bafiam-bot get_info`==> Return a list of usernames and their corresponding emails
+1. `get_info`==> Return a list of usernames and their corresponding emails
 
-2. `@bafiam-bot help` ==> Returns a detailed overview description of the bot and commands to use
+2. `help` ==> Returns a detailed overview description of the bot and commands to use
 
 3. `start my day!!`[typing command] ==> returns a random quote
 
