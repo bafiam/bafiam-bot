@@ -5,8 +5,13 @@ module Bafiambot
   module Commands
     class GetUserInfo < SlackRubyBot::Commands::Base
       command 'get_info' do |client, data, _match|
-        output = Users.new
-        send = output.all_users_name
+        get_token = ENV['SLACK_API_TOKEN']
+        url = "https://slack.com/api/users.list?token=#{get_token}"
+        response = RestClient.get(url)
+        output = JSON.parse(response)
+
+        run = Users.new(output)
+        send = run.all_users_name
         client.say(channel: data.channel, text: send)
       end
     end
