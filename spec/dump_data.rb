@@ -1,3 +1,4 @@
+# rubocop:disable LineLength
 class Testdata
     def self.run_data
         '{
@@ -295,3 +296,4 @@ class Testdata
 }'
 end
 end
+# rubocop:enable LineLength
