@@ -2,11 +2,10 @@ require 'rest-client'
 require 'json'
 
 class Quotes
-  attr_accessor :output
-  def initialize
-    url = 'http://quotes.stormconsultancy.co.uk/random.json'
-    response = RestClient.get(url)
-    @output = JSON.parse(response)
+  attr_reader :output
+  def initialize(output)
+
+    @output = output
   end
 
   def obtain_quote

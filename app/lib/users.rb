@@ -1,9 +1,7 @@
-require 'rest-client'
-require 'json'
 
 class Users
-  attr_accessor :output
-  def initialize(output = Hash.new())
+  attr_reader :output
+  def initialize(output = {})
     @output = output
   end
 
