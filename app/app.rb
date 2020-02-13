@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Bafiambot
   class Bot < SlackRubyBot::Bot
     help do
