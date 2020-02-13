@@ -1,46 +1,42 @@
-# frozen_string_literal: true
-
 require 'rest-client'
 require 'json'
 
 module Bafiambot
   module Commands
-    
     class GetUserInfo < SlackRubyBot::Commands::Base
       command 'get_info' do |client, data, _match|
-        output = Users.fetch_data
-        send = Users.get_all_users_name(output)
+        output_2 = Users.new
+        send = output_2.get_all_users_name
         client.say(channel: data.channel, text: send)
       end
     end
-    
+
     class GetQuote < SlackRubyBot::Commands::Base
       match /start my day!!/ do |client, data, _match|
-        output = Quotes.fetch_quotes
-        send = Quotes.obtain_quote(output)
+        output = Quotes.new
+        send = output.obtain_quote
         client.say(channel: data.channel, text: send)
       end
     end
   end
 end
 
-
 class Users
-  def self.fetch_data
+  attr_accessor :output
+  def initialize
     get_token = ENV['SLACK_API_TOKEN']
     url = "https://slack.com/api/users.list?token=#{get_token}"
     response = RestClient.get(url)
-    output = JSON.parse(response)
-    output
+    @output = JSON.parse(response)
   end
 
-  def self.get_all_users_name(data)
-    members = data['members']
+  def get_all_users_name
+    member = @output['members']
     i = 0
     user_names = []
-    while i < members.length
-      username = members[i]['name']
-      email = members[i]['profile']['email']
+    while i < member.length
+      username = member[i]['name']
+      email = member[i]['profile']['email']
       user_names.push("#{username} : #{email}") unless email.nil?
       i += 1
     end
@@ -49,18 +45,17 @@ class Users
   end
 end
 
-
 class Quotes
-  def self.fetch_quotes
+  attr_accessor :output_1
+  def initialize
     url = 'http://quotes.stormconsultancy.co.uk/random.json'
     response = RestClient.get(url)
-    output = JSON.parse(response)
-    output
+    @output_1 = JSON.parse(response)
   end
 
-  def self.obtain_quote(data)
-    quote = data['quote']
-    author = data['author']
+  def obtain_quote
+    quote = @output_1['quote']
+    author = @output_1['author']
     " #{quote} by #{author}"
   end
 end
