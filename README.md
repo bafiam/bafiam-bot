@@ -6,6 +6,10 @@ The bafiam bot using a single command:
 1. One can get a list of all members; all arranged in a list starting with their name and email.
 2. Get a random quote to start your day
 
+## Screenshots
+
+![screenshot](bot.png)
+
 ## Prerequisites
 
 The development environment uses `Ruby`, hence install ruby before proceeding.
