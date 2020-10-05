@@ -3,7 +3,7 @@
 The bafiam bot is technically a small tweak that brings efficiency to any slack workspace. As a developer, I find myself, in need of crucial members' information. The only way to access this information is to go through the entire member's list. For example, in the case where I have a member's email, am forced to almost check each member's profile and compare their email with the one I have. This is tiring work. On other days, I need a motivation quote to think about and start my day with. The solution to that is to search for one on the net.
 The bafiam bot using a single command:
 
-1. One can get a list of all members; all arranged in a list starting with their name and email.
+1. One can get a list of all members; all arranged in a list starting with their name and email
 2. Get a random quote to start your day
 
 ## Screenshots
@@ -24,7 +24,7 @@ The development environment uses `Ruby`, hence install ruby before proceeding.
 
 1. Clone the project - git clone`https://github.com/bafiam/bafiam-bot.git`
 
-2. Run `bundle` to get all the gems.
+2. Run `bundle` to get all the gems
 
 3. create a `.env` file
 
@@ -55,7 +55,7 @@ The development environment uses `Ruby`, hence install ruby before proceeding.
 The tests have been implemented using `RSpec`support from `slack-ruby-bot`
 To run: Type
 `rspec`
-on your Terminal to get a report.
+on your Terminal to get a report
 
 ## Testing the endpoints
 
@@ -81,4 +81,4 @@ This project was developed using:
 
 ## Contact
 
-Stephen Gumba - [Github profile](https://github.com/bafiam)
+Stephen Gumba - [GitHub profile](https://github.com/bafiam)
