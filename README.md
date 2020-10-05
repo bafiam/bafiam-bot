@@ -75,9 +75,9 @@ This project was developed using:
 
 - dotenv ==> Enable us to load and run the bot from the config as well as load the environment variables
 
-- rest-client ==> A simple HTTP and REST client to enable us to process the URL and get the data needed.
+- rest-client ==> A simple HTTP and REST client to enable us to process the URL and get the data needed
 
-- RSpec ==> For unit testing though in our case, we will be utilizing the RSpec from the slack-ruby-box and integrating them into our bot.
+- RSpec ==> For unit testing though in our case, we will be utilizing the RSpec from the slack-ruby-box and integrating them into our bot
 
 ## Contact
 
